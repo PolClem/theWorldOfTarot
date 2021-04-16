@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+	<title>THE WORLD OF TAROT</title>
+    <meta name="viewport" content="width=device-width"/>
+	<meta name="description" content="App para macheo"/>
+    <meta name="keywords" content="App macheo de personas, tarot, juego de macheo"/>
+    <meta name="author" content="Paula Clemente"/>
+    <meta name="Copyright" content="PolClem 2021"/>
+    
+    <!--Hola Sou Paula Clemente de Goya Corrientes aunque vivo en Caá Catí, hice el colegio en la escuela
+         Normal Dr Mariano I. Loza de Goya, y estoy retomando mis estudios de Licenciatura en Sistemas en 
+        la Unne Corrientes. Amo los animales en especial los Gatitos!!!-->
+
+     <!-- ROBOTS 
+    <meta name="robots" content="index"/>
+    <meta name="robots" content="noindex"/>
+    <meta name="robots" content="follow"/>
+    <meta name="robots" content="nofollorw"/>
+    -->
+
+   <!-- HTML Meta Tags -->
+    <title>THE WORLD OF TAROT</title>
+    <meta name="description" content="THE WORLD OF TAROT - Queres saber tu futuro, si congenias con tu pareja?">
+    <link rel="icon" href="images/icono.png" type="icono/png"/>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://theworldoftarot-pauclem.web.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="THE WORLD OF TAROT">
+    <meta property="og:description" content="THE WORLD OF TAROT - Queres saber tu futuro, si congenias con tu pareja?">
+    <meta property="og:image" content="https://theworldoftarot-pauclem.web.app/images/icono.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="">
+    <meta property="twitter:url" content="https://theworldoftarot-pauclem.web.app/">
+    <meta name="twitter:title" content="THE WORLD OF TAROT">
+    <meta name="twitter:description" content="THE WORLD OF TAROT - Queres saber tu futuro, si congenias con tu pareja?">
+    <meta name="twitter:image" content="https://theworldoftarot-pauclem.web.app/images/icono.jpg">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+</head>
+<body>
+    <header>
+       <strong><p>THE MAGIC WORLD OF TAROT</p></strong>
+    </header> 
+    <!--Pantalla donde todo comienza-->
+    <section id="inicio" class="desktop">
+        <div class="row">
+            <h1 class="inicioTitulo">Probá tu suerte</h1>             
+        </div> 
+        <div class="mb-3">
+            <label for="exampleJugador1" class="form-label">Jugador 1</label>
+            <input type="text" class="form-control" placeholder="Ingrese su nombre" id="jugador1" autocomplete="off">
+        </div>
+        <div class="mb-3">
+            <label for="exampleJugado2" class="form-label">Jugador 2</label>
+            <input type="text" class="form-control" placeholder="Ingrese su nombre" id="jugador2" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary" id="botonCarga">Jugar</button>     
+        <div id="pantallaInicio">
+            
+        </div>
+    </section>
+
+    <!--Pantalla donde se ve la animación, todas las cartas implicadas en el juego pasan en un total de 3000.8s-->
+    <section id="animacion" class="desktop">
+       <img id="imCar">
+    </section>
+
+    <!--Pantalla donde vemos un carrousel con las cartas que recibió cada jugador-->
+    <section id="resultados" class="desktop">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="card carousel-item active" data-bs-interval="5000" id="carta1">
+                </div>
+                <div class="card carousel-item" data-bs-interval="5000" id="carta2">
+                </div>
+                <div class="card carousel-item" data-bs-interval="5000" id="carta3">
+                </div>
+                <div class="card carousel-item" data-bs-interval="5000" id="carta4">
+                </div>
+                <div class="card carousel-item" data-bs-interval="5000" id="carta5">
+                </div>
+                <div class="card carousel-item" data-bs-interval="5000" id="carta6">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" color="black"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <button id="cerrarResultados">Resultados</button>
+    </section>
+	
+    <!--Pantalla que nos dá la opcioón de ir a el resultado del juego o realizar una nueva partida-->
+	<section id="vista" class="desktop">
+        <div><button type="button" class="btn btn-outline-primary" id="botonR">Resultados</button></div>	
+  		<div><button type="button" class="btn btn-outline-primary" id="botonNT">Tirar de Nuevo</button></div>	
+    </section>
+
+    <!--Pantalla donde nos muestra todas las cartas y la compatibilidas entre los jugadores, nos dá la opción de guardar o no esa jugada-->
+    <section id="carga" class="desktop">
+        <div  id="pantallaCarga">
+
+        </div>
+        <button type="button" class="btn btn-secondary" id="guardar">Guardar</button></div>
+        <button type="button" class="btn btn-secondary" id="noGuardar">Salir</button></div>
+  </section>
+
+   
+
+	<footer>
+		<strong><p>The World of Tarot © Copy - Todos los derechos reservados PolClem</p></strong>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
